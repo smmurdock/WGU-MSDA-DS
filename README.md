@@ -5,4 +5,9 @@ Collection of projects completed for Western Governors University Master of Scie
 - [X] D205 - Data Acquisition
 - [X] D206 - Data Cleaning
 - [ ] D207 - Exploratory Data Analysis (EDA)
-- [ ] D208 - Predictive Modeling
+
+---
+
+...Coming Soon...
+
+Change in program requirements.
