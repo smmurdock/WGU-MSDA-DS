@@ -28,9 +28,9 @@ CREATE TABLE item_type (
 -- Create `sales_channel` table
 CREATE TABLE sales_channel (
     sales_channel_id SERIAL PRIMARY KEY,
-    channel_name VARCHAR(255) NOT NULL,
+    sales_channel_name VARCHAR(255) NOT NULL,
   -- Add constraint
-    CONSTRAINT "channel_name_not_empty" CHECK (LENGTH(TRIM(channel_name)) >= 0)
+    CONSTRAINT "channel_name_not_empty" CHECK (LENGTH(TRIM(sales_channel_name)) >= 0)
 );
 
 -- Create `orders` table
