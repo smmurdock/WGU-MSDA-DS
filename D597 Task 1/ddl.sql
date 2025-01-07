@@ -1,9 +1,9 @@
 -- Create `region` table
 CREATE TABLE region (
     region_id SERIAL PRIMARY KEY,
-    region_name VARCHAR(255) NOT NULL
+    region_name VARCHAR(255) NOT NULL,
     -- Add constraint
-    CONSTRAINT "region_name_not_empty" CHECK (LENGTH(TRIM(region)name)) >= 0)
+    CONSTRAINT "region_name_not_empty" CHECK (LENGTH(TRIM(region_name)) >= 0)
 );
 
 -- Create `country` table
@@ -11,6 +11,8 @@ CREATE TABLE country (
     country_id SERIAL PRIMARY KEY,
     country_name VARCHAR(255) NOT NULL,
     region_id INT,
+    -- Add constraint
+    CONSTRAINT "country_name_not_empty" CHECK (LENGTH(TRIM(country_name)) >= 0),
     -- Add foreign key references
     FOREIGN KEY (region_id) REFERENCES region(region_id)
 );
@@ -18,13 +20,17 @@ CREATE TABLE country (
 -- Create `item_type` table
 CREATE TABLE item_type (
     item_type_id SERIAL PRIMARY KEY,
-    item_type_name VARCHAR(255) NOT NULL
+    item_type_name VARCHAR(255) NOT NULL,
+    -- Add constraint
+    CONSTRAINT "item_type_name_not_empty" CHECK (LENGTH(TRIM(item_type_name)) >= 0)
 );
 
 -- Create `sales_channel` table
 CREATE TABLE sales_channel (
     sales_channel_id SERIAL PRIMARY KEY,
-    channel_name VARCHAR(255) NOT NULL
+    channel_name VARCHAR(255) NOT NULL,
+  -- Add constraint
+    CONSTRAINT "channel_name_not_empty" CHECK (LENGTH(TRIM(channel_name)) >= 0)
 );
 
 -- Create `orders` table
