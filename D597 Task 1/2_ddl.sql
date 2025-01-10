@@ -33,8 +33,8 @@ CREATE TABLE sales_channel (
     CONSTRAINT "channel_name_not_empty" CHECK (LENGTH(TRIM(sales_channel_name)) >= 0)
 );
 
--- Create `order` table
-CREATE TABLE order (
+-- Create `orders` table
+CREATE TABLE orders (
     order_id SERIAL PRIMARY KEY,
     order_priority CHAR(1),
     order_date DATE,
@@ -59,5 +59,5 @@ CREATE TABLE sales_detail (
     total_cost DECIMAL(10, 2),
     total_profit DECIMAL(10, 2),
     -- Add foreign key references
-    FOREIGN KEY (order_id) REFERENCES order(order_id)
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );

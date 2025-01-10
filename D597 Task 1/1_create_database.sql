@@ -37,6 +37,6 @@ COPY bad_sales_records (
     order_date, ship_date, units_sold, unit_price,
     unit_cost, total_revenue, total_cost, total_profit
 )
-FROM "C:\WGU\D597\Task 1\Scenario 2.csv"
+FROM "C:\Downloads\1000000 Sales Records.csv"
 DELIMITED ','
 CSV HEADER;

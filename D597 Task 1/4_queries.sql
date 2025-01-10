@@ -3,7 +3,7 @@ SELECT
     r.region_name,
     SUM(sd.total_revenue) AS total_sales
 FROM sales_detail AS sd
-JOIN order AS o ON sd.order_id = o.order_id
+JOIN orders AS o ON sd.order_id = o.order_id
 JOIN country AS c ON o.country_id = c.country_id
 JOIN region AS r ON c.region_id = r.region_id
 GROUP BY r.region_name
@@ -14,7 +14,7 @@ SELECT
     c.country_name,
     SUM(sd.total_revenue) AS total_sales
 FROM sales_detail AS sd
-JOIN order AS o ON sd.order_id = o.order_id
+JOIN orders AS o ON sd.order_id = o.order_id
 JOIN country AS c ON o.country_id = c.country_id
 GROUP BY c.country_name
 ORDER BY total_sales DESC;
@@ -24,7 +24,7 @@ SELECT
     c.country_name, 
     SUM(sd.units_sold) AS total_units_sold
 FROM sales_detail AS sd
-JOIN order AS o ON sd.order_id = o.order_id
+JOIN orders AS o ON sd.order_id = o.order_id
 JOIN country AS c ON o.country_id = c.country_id
 GROUP BY c.country_name
 ORDER BY total_units_sold DESC
@@ -35,7 +35,7 @@ SELECT
     it.item_type_name,
     SUM(sd.total_profit) / SUM(sd.total_revenue) * 100 AS profit_margin
 FROM item_type AS it
-JOIN order AS o ON it.item_type_id = o.item_type_id
+JOIN orders AS o ON it.item_type_id = o.item_type_id
 JOIN sales_detail AS sd ON o.order_id = sd.order_id
 GROUP BY it.item_type_name
 ORDER BY profit_margin DESC;
@@ -47,7 +47,7 @@ WITH monthly_sales AS (
         DATE_TRUNC('month', o.order_date) AS month,
         SUM(sd.total_revenue) AS total_sales
     FROM sales_detail AS sd
-    JOIN order AS o ON sd.order_id = o.order_id
+    JOIN orders AS o ON sd.order_id = o.order_id
     JOIN country AS c ON o.country_id = c.country_id
     GROUP BY
         c.country_name, 

@@ -23,8 +23,8 @@ INSERT INTO sales_channel (sales_channel_name)
     FROM bad_sales_records
     WHERE sales_channel IS NOT NULL;
 
--- Insert data into `order` table
-INSERT INTO order (order_priority, order_date, ship_date, country_id, item_type_id, sales_channel_id)
+-- Insert data into `orders` table
+INSERT INTO orders (order_priority, order_date, ship_date, country_id, item_type_id, sales_channel_id)
     SELECT
         bsr.order_priority,
         bsr.order_date,
@@ -48,7 +48,7 @@ INSERT INTO sales_detail (order_id, units_sold, unit_price, unit_cost, total_rev
         bsr.total_cost,
         bsr.total_profit
     FROM bad_sales_records AS bsr
-    JOIN order AS o ON bsr.order_id = o.order_id;
+    JOIN orders AS o ON bsr.order_id = o.order_id;
 
 -- Verify data in `regions` table
 SELECT *
@@ -69,9 +69,9 @@ SELECT *
 FROM sales_channel
 LIMIT 10;
 
--- Verify data in `order` table
+-- Verify data in `orders` table
 SELECT *
-FROM order
+FROM orders
 LIMIT 10;
 
 -- Verify data in `sales_detail` table
