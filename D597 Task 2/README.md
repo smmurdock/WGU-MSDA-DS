@@ -13,9 +13,7 @@ You will replicate this common process as you complete this task. You will take 
 Choose one of the scenarios provided in the Supporting Documents. Each scenario has associated JSON files that will be located on the desktop of the WGU Virtual Lab environment. You will complete the following:
 
 1. Design a non-relational database solution.
-
 2. Implement the solution.
-
 3. Present the solution using Panopto to an audience that consists of your peers within a project team.
  
 
