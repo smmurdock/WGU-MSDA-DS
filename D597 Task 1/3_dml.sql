@@ -24,8 +24,9 @@ INSERT INTO sales_channel (sales_channel_name)
     WHERE sales_channel IS NOT NULL;
 
 -- Insert data into `orders` table
-INSERT INTO orders (order_priority, order_date, ship_date, country_id, item_type_id, sales_channel_id)
+INSERT INTO orders (order_id, order_priority, order_date, ship_date, country_id, item_type_id, sales_channel_id)
     SELECT
+        bsr.order_id,
         bsr.order_priority,
         bsr.order_date,
         bsr.ship_date,
@@ -41,7 +42,7 @@ INSERT INTO orders (order_priority, order_date, ship_date, country_id, item_type
 INSERT INTO sales_detail (order_id, units_sold, unit_price, unit_cost, total_revenue, total_cost, total_profit)
     SELECT
         o.order_id,
-        bsr.unit_sold,
+        bsr.units_sold,
         bsr.unit_price,
         bsr.unit_cost,
         bsr.total_revenue,

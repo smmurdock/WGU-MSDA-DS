@@ -14,7 +14,7 @@ CREATE TABLE country (
     -- Add constraint
     CONSTRAINT "country_name_not_empty" CHECK (LENGTH(TRIM(country_name)) >= 0),
     -- Add foreign key references
-    FOREIGN KEY (region_id) REFERENCES region(region_id)
+    FOREIGN KEY (region_id) REFERENCES region(region_id) ON DELETE CASCADE
 );
 
 -- Create `item_type` table
@@ -35,7 +35,7 @@ CREATE TABLE sales_channel (
 
 -- Create `orders` table
 CREATE TABLE orders (
-    order_id SERIAL PRIMARY KEY,
+    order_id INTEGER PRIMARY KEY,
     order_priority CHAR(1),
     order_date DATE,
     ship_date DATE,
@@ -43,9 +43,9 @@ CREATE TABLE orders (
     item_type_id INT,
     sales_channel_id INT,
     -- Add foreign key references
-    FOREIGN KEY (country_id) REFERENCES country(country_id),
-    FOREIGN KEY (item_type_id) REFERENCES item_type(item_type_id),
-    FOREIGN KEY (sales_channel_id) REFERENCES sales_channel(sales_channel_id)
+    FOREIGN KEY (country_id) REFERENCES country(country_id) ON DELETE CASCADE,
+    FOREIGN KEY (item_type_id) REFERENCES item_type(item_type_id) ON DELETE CASCADE,
+    FOREIGN KEY (sales_channel_id) REFERENCES sales_channel(sales_channel_id) ON DELETE CASCADE
 );
 
 -- Create `sales_details`
@@ -59,5 +59,5 @@ CREATE TABLE sales_detail (
     total_cost DECIMAL(10, 2),
     total_profit DECIMAL(10, 2),
     -- Add foreign key references
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE
 );
