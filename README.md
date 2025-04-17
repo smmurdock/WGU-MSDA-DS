@@ -11,5 +11,5 @@ Collection of projects completed for Western Governors University Master of Scie
 
 ## Master of Science, Data Analytics - Data Science Program (MSDA-DS)
 - [X] D597 - Data Management (3cr)
-- [ ] D600 - Statistical Data Mining (3cr)
+- [X] D600 - Statistical Data Mining (3cr)
 - [ ] D601 - Storytelling for Varied Audiences (3cr)
