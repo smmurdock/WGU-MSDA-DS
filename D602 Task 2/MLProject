@@ -1,0 +1,17 @@
+name: flight_delay_prediction
+conda_env: pipeline_env.yaml
+
+entry_points:
+    import_data:
+        command: 'python import_and_format_data.py'
+
+    clean_data:
+        command: 'python clean_and_filter.py'
+
+    train_model:
+        command: 'python poly_regressor_Python_1.0.0.py'
+
+    run_pipeline:
+        command:
+            'mlflow run . -e import_data && mlflow run . -e clean_data && mlflow
+            run . -e train_model'

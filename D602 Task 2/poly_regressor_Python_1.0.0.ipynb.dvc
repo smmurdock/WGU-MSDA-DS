@@ -1,0 +1,5 @@
+outs:
+- md5: e32a12a65241340517c8a8a3866f612e
+  size: 111514
+  hash: md5
+  path: poly_regressor_Python_1.0.0.ipynb
