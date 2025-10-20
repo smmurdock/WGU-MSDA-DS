@@ -13,8 +13,8 @@ Collection of projects completed for Western Governors University Master of Scie
 - [X] D597 - Data Management (3cr)
 - [X] D600 - Statistical Data Mining (3cr)
 - [X] D601 - Storytelling for Varied Audiences (3cr)
-- [ ] D602 - Deployment
-- [ ] D603 - Machine Learning
-- [ ] D604 - Advanced Analytics
+- [X] D602 - Deployment
+- [X] D603 - Machine Learning
+- [X] D604 - Advanced Analytics
 - [ ] D605 - Optimization
 - [ ] D606 - Data Science Capstone
