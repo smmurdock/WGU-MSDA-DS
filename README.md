@@ -2,6 +2,7 @@
 Collection of projects completed for Western Governors University Master of Science in Data Analytics - Data Science concentration
 
 ## Master of Science, Data Analytics Program (MSDA)
+> Requirements pre-November 2024
 - [X] D204 - The Data Analytics Journey (2cr)
 - [X] D205 - Data Acquisition (3cr)
 - [X] D206 - Data Cleaning (3cr)
@@ -10,6 +11,7 @@ Collection of projects completed for Western Governors University Master of Scie
 ---
 
 ## Master of Science, Data Analytics - Data Science Program (MSDA-DS)
+> Requirements post-November 2024 to include subject specialization
 - [X] D597 - Data Management (3cr)
 - [X] D600 - Statistical Data Mining (3cr)
 - [X] D601 - Storytelling for Varied Audiences (3cr)
