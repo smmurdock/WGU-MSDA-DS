@@ -18,5 +18,5 @@ Collection of projects completed for Western Governors University Master of Scie
 - [X] D602 - Deployment
 - [X] D603 - Machine Learning
 - [X] D604 - Advanced Analytics
-- [ ] D605 - Optimization
+- [X] D605 - Optimization
 - [ ] D606 - Data Science Capstone
